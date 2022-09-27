@@ -1,0 +1,42 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('assets/global.scss');
+@import url('assets/variables.scss');
+
+$p-bg: #8fa3ad;
+$p-light-bg: #bfd4df;
+$p-dark-bg: #61747e;
+$s-bg: #ffff00;
+$s-light-bg: #ffff5a;
+$s-dark-bg: #c7cc00;
+$p-text: #ffffff;
+$s-text: #000000;
+$font-size: 16px;
+$font-weight: 500;
+
+:root {
+    --p-bg: #{$p-bg};
+    --p-light-bg: #{$p-light-bg};
+    --p-dark-bg: #{$p-dark-bg};
+    --s-bg: #{$s-bg};
+    --s-light-bg: #{$s-light-bg};
+    --s-dark-bg: #{$s-dark-bg};
+    --p-text: #{$p-text};
+    --s-text: #{$s-text};
+    --font-size: #{$font-size};
+    --font-weight: #{$font-weight};
+}
+
+html, body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    margin: 0;
+    color: var(--p-text);
+    font-size: var(--font-size);
+    font-weight: var(--font-weight);
+}
+
+* {
+    box-sizing: border-box;
+}

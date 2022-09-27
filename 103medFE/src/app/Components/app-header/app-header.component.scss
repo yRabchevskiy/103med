@@ -1,0 +1,18 @@
+:host {
+    display: flex;
+    padding: 24px 16px;
+    flex-shrink: 0;
+    background-color: var(--p-dark-bg);
+}
+
+.app-link {
+    font-size: calc(var(--font-size) * 2);
+    cursor: pointer;
+    margin: auto 24px;
+    text-transform: capitalize;
+    color: var(--p-text);
+}
+.app-link-active {
+    color: var(--s-text);
+    font-weight: 700;
+}
