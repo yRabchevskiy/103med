@@ -16,13 +16,17 @@ enum CategoryType {
   Phyho = 'Phyho',
 }
 
+export interface IDrugs {
+  drugs: IDrug[];
+}
+
 export interface IDrug {
   id: number;
-  name: number;
-  description: number;
-  doses: number;
-  state: number;
-  count: number;
-  werehouse: number;
-  category: number;
+  name: String;
+  description: String;
+  doses: String;
+  state: String;
+  count: String;
+  werehouse: String;
+  category: String;
 }

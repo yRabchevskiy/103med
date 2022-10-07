@@ -1,1 +1,20 @@
-<p>users works!</p>
+<div>
+    <button pButton pRipple type="button" label="New user" class="p-button-raised p-button-text" (click)="onCreateUser()"></button>
+</div>
+<p-card *ngFor="let user of users; let i = index" [style]="{width: '360px', padding: '12px'}" styleClass="p-card-shadow">
+    <ng-template pTemplate="header">
+        {{ user.first_name }} {{ user.last_name }}
+    </ng-template>
+    <div>{{ user.rang }}</div>
+    <div>{{ user.birstday }}</div>
+    <div>{{ user.email }}</div>
+    <div>{{ user.phone }}</div>
+    <div>{{ user.description }}</div>
+    <!-- <ng-template pTemplate="footer">
+        Footer content here
+    </ng-template> -->
+</p-card>
+
+<p-sidebar [(visible)]="visibleSidebar" position="right" [style]="{width:'50vw'}" [baseZIndex]="10000">
+    <h3>Right Sidebar</h3>
+</p-sidebar>

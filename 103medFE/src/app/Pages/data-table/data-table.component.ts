@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiHttpService } from 'src/app/service/api.service';
+import { GET_DRUGS } from 'src/app/service/user.queris';
+import { IDrug } from './../../models/drug.model';
 
 @Component({
   selector: 'app-data-table',
@@ -6,10 +9,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./data-table.component.scss']
 })
 export class DataTableComponent implements OnInit {
-
-  constructor() { }
+  drugs: IDrug[] = [];
+  constructor(private api: ApiHttpService) { }
 
   ngOnInit(): void {
+    this.api.getDrugs({ query: GET_DRUGS}).subscribe(res => {
+      debugger
+      this.drugs = res;
+    });
   }
 
 }

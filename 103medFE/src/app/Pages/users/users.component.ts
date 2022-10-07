@@ -9,15 +9,18 @@ import { ApiHttpService } from 'src/app/service/api.service';
   styleUrls: ['./users.component.scss']
 })
 export class UsersComponent implements OnInit {
-  data: IUser[] = [];
-
+  users: IUser[] = [];
+  visibleSidebar: boolean = false;
   constructor(private api: ApiHttpService) { }
 
   ngOnInit(): void {
     this.api.getUsers({ query: GET_USERS}).subscribe(res => {
-      console.log(res);
-      this.data = res;
+      this.users = res;
     });
+  }
+
+  onCreateUser() {
+    this.visibleSidebar = !this.visibleSidebar;
   }
 
 }

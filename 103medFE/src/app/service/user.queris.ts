@@ -1,5 +1,5 @@
 export const GET_USERS = `
-  query getUsers {
+  query {
     users {
       id
       first_name
@@ -9,6 +9,21 @@ export const GET_USERS = `
       birstday
       email
       description
+    }
+  }
+`;
+
+export const GET_DRUGS = `
+  query {
+    drugs {
+      id
+      name
+      description
+      doses
+      state
+      count
+      werehouse
+      category
     }
   }
 `;

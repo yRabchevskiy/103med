@@ -26,8 +26,8 @@ model Drug {
   name        String
   description String?
   doses       String?
-  state       String
+  state       String?
   count       String?
-  werehouse   String
-  category    String
+  werehouse   String?
+  category    String?
 }

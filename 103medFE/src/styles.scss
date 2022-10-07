@@ -1,6 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('../node_modules/primeng/resources/themes/lara-light-blue/theme.css');
+@import url('../node_modules/primeng/resources/primeng.min.css');
+@import url('../node_modules/primeicons/primeicons.css');
 @import url('assets/global.scss');
-@import url('assets/variables.scss');
 
 $p-bg: #8fa3ad;
 $p-light-bg: #bfd4df;
@@ -12,7 +14,7 @@ $p-text: #ffffff;
 $s-text: #000000;
 $font-size: 16px;
 $font-weight: 500;
-
+$font-family: "Roboto","Helvetica Neue",sans-serif;
 :root {
     --p-bg: #{$p-bg};
     --p-light-bg: #{$p-light-bg};
@@ -24,6 +26,7 @@ $font-weight: 500;
     --s-text: #{$s-text};
     --font-size: #{$font-size};
     --font-weight: #{$font-weight};
+    // --font-family: #{$font-family};
 }
 
 html, body {
@@ -35,8 +38,10 @@ html, body {
     color: var(--p-text);
     font-size: var(--font-size);
     font-weight: var(--font-weight);
+    // font-family: var(--font-family) !important;
 }
 
 * {
     box-sizing: border-box;
+    font-family: var(--font-family);
 }

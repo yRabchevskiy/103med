@@ -1,1 +1,24 @@
-<p>data-table works!</p>
+<p-table [value]="drugs" responsiveLayout="scroll">
+  <ng-template pTemplate="header">
+    <tr>
+      <th>Назва</th>
+      <th>Доза</th>
+      <th>Тип</th>
+      <th>кількість</th>
+      <th>Категорія</th>
+      <th>Склад</th>
+      <th>Опис</th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-drug>
+    <tr>
+      <td>{{ drug.name }}</td>
+      <td>{{ drug.doses }}</td>
+      <td>{{ drug.state }}</td>
+      <td>{{ drug.count }}</td>
+      <td>{{ drug.category }}</td>
+      <td>{{ drug.werehouse }}</td>
+      <td>{{ drug.description }}</td>
+    </tr>
+  </ng-template>
+</p-table>
